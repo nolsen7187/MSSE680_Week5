@@ -1,0 +1,11 @@
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\app.config
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\ServiceTest.dll.config
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\ServiceTest.dll
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\ServiceTest.pdb
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\FFR.dll
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\EntityFramework.dll
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\FFR.pdb
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\EntityFramework.xml
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.dll
+C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.pdb
