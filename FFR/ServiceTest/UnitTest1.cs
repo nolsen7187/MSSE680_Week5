@@ -22,7 +22,7 @@ namespace ServiceTest
 
             Customer createCustomer = Activator.CreateInstance<Customer>();
             
-            createCustomer.CustomerId = 2;
+            //createCustomer.CustomerId = 2;
             createCustomer.FirstName = "Nick";
             createCustomer.LastName = "Olsen";
             createCustomer.Address = "11320 Lovage Way";
