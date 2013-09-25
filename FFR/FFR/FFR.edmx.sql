@@ -5,7 +5,16 @@
 -- Date Created: 09/22/2013 21:54:50
 -- Generated from EDMX file: C:\Users\NOLSEN\Source\Repos\MSSE680_Week4_Working\FFR\FFR\FFR.edmx
 -- --------------------------------------------------
-IF OBJECT_ID(N'FFR', N'U') IS NULL CREATE DATABASE FFR;
+--Dropping existing database
+--IF Exists(Select * From sys.sysdatabases where name='FFR')
+--CREATE DATABASE FFR;
+	use FFR;		
+	alter database FFR set single_user with rollback immediate;	
+	use master;
+	drop database FFR;
+
+--IF Not Exists(Select * From sys.sysdatabases where name='FFR')
+CREATE DATABASE FFR;
 
 SET QUOTED_IDENTIFIER OFF;
 GO
@@ -48,13 +57,16 @@ IF OBJECT_ID(N'[dbo].[SalesItems]', 'U') IS NOT NULL
     DROP TABLE [dbo].[SalesItems];
 GO
 
+--Creating Database
+
+
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
 
 -- Creating table 'Customers'
 CREATE TABLE [dbo].[Customers] (
-    [CustomerId] int  NOT NULL,
+    [CustomerId] [int] IDENTITY(1,1)  NOT NULL,
     [FirstName] varchar(50)  NULL,
     [LastName] varchar(50)  NULL,
     [Address] varchar(200)  NULL,
