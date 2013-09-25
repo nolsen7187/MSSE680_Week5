@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FFR;
+using Service;
 using System.Linq;
 using System.Collections.Generic;
 using System.Data;
@@ -8,6 +8,7 @@ using System.Collections;
 using System.Data.Entity;
 using System.Configuration;
 using System.Linq.Expressions;
+using FFR;
 
 namespace ServiceTest
 {
@@ -20,6 +21,7 @@ namespace ServiceTest
             Int16 actionType = 1;
 
             Customer createCustomer = Activator.CreateInstance<Customer>();
+            
             createCustomer.CustomerId = 2;
             createCustomer.FirstName = "Nick";
             createCustomer.LastName = "Olsen";
@@ -30,7 +32,7 @@ namespace ServiceTest
             createCustomer.Phone = "303-949-2695";
             createCustomer.Email = "jolsen@hotmail.com";
             //Factory Return Repository
-            var customerRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Customer>();
+            var customerRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Customer>();
             //Simulating the business logic that would ultimately be getting called from a controller in the manner it would be called.
             switch (actionType)
             {
@@ -49,7 +51,7 @@ namespace ServiceTest
                     break;
             } //customerRepo.Create(createCustomer);
            // Console.WriteLine("Yeah Buddy");            
-        }
+        }/*
         [TestMethod]
         public void UseCRUDFactoryRetrieveUsingRepository()
         {
@@ -129,7 +131,7 @@ namespace ServiceTest
                     break;
             }
         
-        }
+        }*/
 
     }
 }

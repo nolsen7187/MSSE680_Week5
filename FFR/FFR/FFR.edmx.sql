@@ -8,12 +8,16 @@
 --Dropping existing database
 --IF Exists(Select * From sys.sysdatabases where name='FFR')
 --CREATE DATABASE FFR;
-	use FFR;		
-	alter database FFR set single_user with rollback immediate;	
-	use master;
-	drop database FFR;
+--IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
+	--use FFR;		
+--IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
+	--alter database FFR set single_user with rollback immediate;	
+--IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
+	--use master;
+--IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
+	--drop database FFR;
 
---IF Not Exists(Select * From sys.sysdatabases where name='FFR')
+--IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
 CREATE DATABASE FFR;
 
 SET QUOTED_IDENTIFIER OFF;
@@ -66,7 +70,8 @@ GO
 
 -- Creating table 'Customers'
 CREATE TABLE [dbo].[Customers] (
-    [CustomerId] [int] IDENTITY(1,1)  NOT NULL,
+    --[CustomerId] [int] IDENTITY(1,1)  NOT NULL,
+	    [CustomerId] [int]  NOT NULL,
     [FirstName] varchar(50)  NULL,
     [LastName] varchar(50)  NULL,
     [Address] varchar(200)  NULL,

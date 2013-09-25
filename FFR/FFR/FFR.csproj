@@ -90,11 +90,7 @@
     <Compile Include="Service\CustomeInterfaceTestNotUsedr.cs" />
     <Compile Include="Service\EmployeeInterfaceTestNotUsed.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Presentation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EntityDeploy Include="FFR.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

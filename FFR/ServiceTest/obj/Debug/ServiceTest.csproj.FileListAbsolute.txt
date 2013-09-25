@@ -9,3 +9,5 @@ C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\EntityFrame
 C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
 C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.dll
 C:\Users\nolsen\Source\Repos\MSSE680_Week5\FFR\ServiceTest\obj\Debug\ServiceTest.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\Service.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\ServiceTest\bin\Debug\Service.pdb
