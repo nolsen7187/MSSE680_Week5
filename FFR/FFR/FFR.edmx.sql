@@ -1,24 +1,5 @@
-
--- --------------------------------------------------
--- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
--- --------------------------------------------------
--- Date Created: 09/22/2013 21:54:50
--- Generated from EDMX file: C:\Users\NOLSEN\Source\Repos\MSSE680_Week4_Working\FFR\FFR\FFR.edmx
--- --------------------------------------------------
---Dropping existing database
---IF Exists(Select * From sys.sysdatabases where name='FFR')
---CREATE DATABASE FFR;
---IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
-	--use FFR;		
---IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
-	--alter database FFR set single_user with rollback immediate;	
---IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
-	--use master;
---IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
-	--drop database FFR;
-
---IF OBJECT_ID(N'FFR', N'U') IS NOT NULL 
-CREATE DATABASE FFR;
+IF NOT EXISTS(select * from sys.databases where name = 'FFR')
+	CREATE DATABASE FFR;
 
 SET QUOTED_IDENTIFIER ON;
 GO
@@ -26,7 +7,6 @@ USE [FFR];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
-
 -- --------------------------------------------------
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
