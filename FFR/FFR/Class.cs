@@ -1,7 +1,7 @@
 ﻿
 
 using System;
-namespace FFR
+namespace DAL
 {
 
     public class CTest

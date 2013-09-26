@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace FFR
+namespace DAL
 {
     /// V1 Week 4
     /// <summary>

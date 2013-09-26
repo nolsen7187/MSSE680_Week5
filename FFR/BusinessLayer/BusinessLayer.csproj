@@ -48,9 +48,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FFR\FFR.csproj">
+    <ProjectReference Include="..\FFR\DAL.csproj">
       <Project>{1202d22f-da29-4854-9be5-d37492f54065}</Project>
-      <Name>FFR</Name>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{18e94794-b5fd-479f-8a6f-502e2d228d13}</Project>

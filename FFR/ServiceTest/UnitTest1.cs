@@ -8,7 +8,7 @@ using System.Collections;
 using System.Data.Entity;
 using System.Configuration;
 using System.Linq.Expressions;
-using FFR;
+using DAL;
 
 namespace ServiceTest
 {

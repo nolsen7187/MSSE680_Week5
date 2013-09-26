@@ -7,7 +7,7 @@
     <ProjectGuid>{1202D22F-DA29-4854-9BE5-D37492F54065}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FFR</RootNamespace>
+    <RootNamespace>DAL</RootNamespace>
     <AssemblyName>FFR</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FFR
+namespace DAL
 {
     using System;
     using System.Data.Entity;

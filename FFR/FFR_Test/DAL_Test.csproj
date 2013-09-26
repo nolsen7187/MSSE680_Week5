@@ -65,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FFR\FFR.csproj">
+    <ProjectReference Include="..\FFR\DAL.csproj">
       <Project>{1202d22f-da29-4854-9be5-d37492f54065}</Project>
-      <Name>FFR</Name>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
