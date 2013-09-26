@@ -19,10 +19,9 @@ namespace ServiceTest
         public void UseCRUDFactoryandReturnARepositoryandCreateCustomer()
         {
             Int16 actionType = 1;
-
-            Customer createCustomer = Activator.CreateInstance<Customer>();
             
-            //createCustomer.CustomerId = 2;
+            var createCustomer = Activator.CreateInstance<Customer>();
+            
             createCustomer.FirstName = "Nick";
             createCustomer.LastName = "Olsen";
             createCustomer.Address = "11320 Lovage Way";
@@ -51,11 +50,14 @@ namespace ServiceTest
                     break;
             } //customerRepo.Create(createCustomer);
            // Console.WriteLine("Yeah Buddy");            
-        }/*
+        }
+        
+        
+        /*
         [TestMethod]
         public void UseCRUDFactoryRetrieveUsingRepository()
         {
-            var customerRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Customer>();
+            var customerRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Customer>();
 
             List<Customer> customerList = customerRepo.GetAll().ToList<Customer>();
             Assert.IsTrue(customerList.Count > 0);
@@ -67,16 +69,15 @@ namespace ServiceTest
             Int16 actionType = 2;
 
             Item createItem = Activator.CreateInstance<Item>();
-            createItem.ItemId = 2;
             createItem.ItemName = "FP Gray Turbo";
             createItem.Price = 1200;
             createItem.ItemCost = 550;
             createItem.ItemId = 2;
-            var itemRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
+            var itemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
 
             itemRepo.Create(createItem);
 
-            var deleteItemRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
+            var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
             Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 2 select d).Single();
 
             switch (actionType)
@@ -102,16 +103,15 @@ namespace ServiceTest
             Int16 actionType = 2;
 
             Item createItem = Activator.CreateInstance<Item>();
-            createItem.ItemId = 3;
             createItem.ItemName = "FP Gray Turbo";
             createItem.Price = 1200;
             createItem.ItemCost = 550;
 
-            var itemRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
+            var itemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
 
             itemRepo.Create(createItem);
 
-            var deleteItemRepo = FFR.Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
+            var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
             Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 3 select d).Single();
 
             switch (actionType)
