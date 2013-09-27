@@ -15,7 +15,7 @@ namespace ServiceTest
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        /*[TestMethod]
         public void UseCRUDFactoryandReturnARepositoryandCreateCustomer()
         {
             Int16 actionType = 1;
@@ -53,7 +53,7 @@ namespace ServiceTest
         }
         
         
-        /*
+        
         [TestMethod]
         public void UseCRUDFactoryRetrieveUsingRepository()
         {

@@ -7,14 +7,16 @@ using DAL;
 
 namespace Service
 {
-    class InstatiateCallerRequested
+    public class InstatiateCallerRequested
     {
+        public static Customer customer;
+
         public void InstantiateCallerRequested(string CallerRequested)
         {
             switch (CallerRequested)
             {
                 case "Customer":
-                    Customer customer = Activator.CreateInstance<Customer>();
+                    customer = Activator.CreateInstance<Customer>();
                     break;
                 case "Item":
                     Item item = Activator.CreateInstance<Item>();

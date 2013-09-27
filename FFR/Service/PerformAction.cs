@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Service
 {
-    class PerformAction
+    public class PerformAction
     {
         public bool Action(Int16 _actionType)
         {

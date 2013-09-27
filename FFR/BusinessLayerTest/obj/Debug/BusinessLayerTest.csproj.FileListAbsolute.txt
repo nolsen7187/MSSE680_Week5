@@ -2,3 +2,12 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\Busin
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\BusinessLayerTest.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\obj\Debug\BusinessLayerTest.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\obj\Debug\BusinessLayerTest.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\obj\Debug\BusinessLayerTest.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\BusinessLayer.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\Service.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\Service.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\FFR.pdb
