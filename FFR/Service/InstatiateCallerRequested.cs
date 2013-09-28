@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Xml;
 
 namespace Service
 {
@@ -11,9 +12,21 @@ namespace Service
     {
         public static Customer customer;
 
-        public void InstantiateCallerRequested(string CallerRequested)
+//        public void InstantiateCallerRequested(string CallerRequested)
+        public void InstantiateCallerRequested(XmlWriter localXmlWriter)
         {
-            switch (CallerRequested)
+            XmlReader xmlReader = XmlReader.Create("Register.xml");
+            while (xmlReader.Read())
+            {
+                if (xmlReader.NodeType == XmlNodeType.Element
+                    && xmlReader.Name == "Customer")
+                {
+                    customer = Activator.CreateInstance<Customer>();
+                    break;
+                }
+            }
+
+            /*switch (localXmlWriter)
             {
                 case "Customer":
                     customer = Activator.CreateInstance<Customer>();
@@ -30,9 +43,9 @@ namespace Service
                 case "Employee":
                     Employee employee = Activator.CreateInstance<Employee>();
                     break;
-                default:
+                default:*/
                     return;
-            }
+            //}
         }
     }
 }

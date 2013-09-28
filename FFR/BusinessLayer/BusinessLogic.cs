@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Service;
 using DAL;
 using System.Collections;
+using System.Xml;
+
+
 //https://www.youtube.com/watch?v=WLjvNpP6yeQ
 namespace BusinessLayer
 {
@@ -15,17 +18,20 @@ namespace BusinessLayer
         private HandleData handleData = new HandleData();
         private string CallerRequested;
         private ArrayList DataList;
+        private XmlWriter localXmlWriter;
 
-        public Facade(string CallerRequested, ArrayList DataList)
+        //public Facade(string CallerRequested, ArrayList DataList)
+        public Facade(XmlWriter xmlWriter)
         {
-            this.CallerRequested = CallerRequested;
-            this.DataList = DataList;
+            //this.CallerRequested = CallerRequested;
+            //this.DataList = DataList;
+            this.localXmlWriter = xmlWriter;
         }
 
         public void RegisterCustomer()
         {
-            instatiateCallerRequested.InstantiateCallerRequested(CallerRequested);
-            handleData.setdata(DataList);
+            instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter);
+            handleData.setdata(localXmlWriter);
         }
     }
 }
