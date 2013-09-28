@@ -19,6 +19,7 @@ namespace BusinessLayerTest
             xmlWriter.WriteStartDocument();
             xmlWriter.WriteComment("This Xml is generated when a customer registers on FFR's site");
             xmlWriter.WriteStartElement("Customer");
+            //xmlWriter.WriteAttributeString("ObjectType", "Customer");
             xmlWriter.WriteAttributeString("ActionType", "1");
             xmlWriter.WriteAttributeString("FirstName", "Nick");
             xmlWriter.WriteAttributeString("LastName", "Olsen");
