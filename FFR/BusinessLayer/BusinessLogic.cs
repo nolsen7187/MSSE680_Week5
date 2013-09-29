@@ -16,6 +16,7 @@ namespace BusinessLayer
     {
         private InstatiateCallerRequested instatiateCallerRequested = new InstatiateCallerRequested();
         private HandleData handleData = new HandleData();
+        private PerformAction performAction = new PerformAction();
         private string CallerRequested;
         private ArrayList DataList;
         private XmlWriter localXmlWriter;
@@ -32,6 +33,7 @@ namespace BusinessLayer
         {
             instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter);
             handleData.setdata(localXmlWriter);
+            performAction.Action(1);
         }
     }
 }

@@ -9,3 +9,4 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\EntityFra
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\BusinessLayer.dll.config

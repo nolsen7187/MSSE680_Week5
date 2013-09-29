@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This Xml is generated when a customer registers on FFR's site-->
+<Customer>
+  <ObjectType>Customer</ObjectType>
+  <ActionType>1</ActionType>
+  <FirstName>Nick</FirstName>
+  <LastName>Olsen</LastName>
+  <City>Parker</City>
+  <State>CO</State>
+  <Zip>80134</Zip>
+  <Phone>3037181335</Phone>
+  <Email>nolsen@regis.edu</Email>
+</Customer>

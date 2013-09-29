@@ -11,3 +11,4 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\Busin
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\Service.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\EntityFramework.xml
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayerTest\bin\Debug\BusinessLayerTest.dll.config

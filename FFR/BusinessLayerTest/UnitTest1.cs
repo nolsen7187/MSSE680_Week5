@@ -21,6 +21,7 @@ namespace BusinessLayerTest
             xmlWriter.WriteStartElement("Customer");
             xmlWriter.WriteElementString("ObjectType", "Customer");
             xmlWriter.WriteElementString("ActionType", "1");
+            //xmlWriter.WriteElementString("CustomerId", "1");
             xmlWriter.WriteElementString("FirstName", "Nick");
             xmlWriter.WriteElementString("LastName", "Olsen");
             xmlWriter.WriteElementString("City", "Parker");
@@ -33,7 +34,9 @@ namespace BusinessLayerTest
 
             xmlWriter.Flush();
             xmlWriter.Close();
-            
+
+            Facade newFacade = new Facade(xmlWriter);
+            newFacade.RegisterCustomer();
             /*XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
 
@@ -51,7 +54,7 @@ namespace BusinessLayerTest
             writer.WriteEndDocument();
 
             writer.Flush();
-            writer.Close();*/
+            writer.Close();
 
 
             Facade newFacade = new Facade(xmlWriter);
@@ -63,12 +66,13 @@ namespace BusinessLayerTest
             dataList.Add("State=CO");
             dataList.Add("Zip=80134");
             dataList.Add("Phone=3037181335");
-            dataList.Add("Email=nolsen@regis.edu");*/
+            dataList.Add("Email=nolsen@regis.edu");
 
 
 //            Facade newFacade = new Facade("Customer", dataList);
 
-            newFacade.RegisterCustomer();
+            newFacade.RegisterCustomer();*/
+
         }
     }
 }

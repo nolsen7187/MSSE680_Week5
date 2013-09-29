@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Service;
+using System.Data.Entity;
+using DAL;
 
 namespace Service
 {
     public class PerformAction
     {
+        public CRUDRepositoryConcreteFactory cruddy = new CRUDRepositoryConcreteFactory();
         public bool Action(Int16 _actionType)
         {
-            switch (_actionType)
+            var customerRepo = cruddy.CRUD<Customer>();//cruddy.CRUD<Customer>();
+        customerRepo.Create(InstatiateCallerRequested.customer);
+        return true;// = new DataRepository<Customer>();
+            /*switch (_actionType)
             {
                 case 1://Create
                     //customerRepository.Create(customer);// = new DataRepository<Customer>();
@@ -26,7 +33,7 @@ namespace Service
                     //Assert.AreEqual(savedCustomer.CustomerId, 1);
                     break;
             } //customerRepo.Create(createCustomer);
-            return true;
+            return true;*/
             //attempt to perform most likely CRUD and return value based on success. Don't forget to use exception handling.
         }
     }
