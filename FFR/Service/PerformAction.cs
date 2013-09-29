@@ -25,7 +25,6 @@ namespace Service
                     //Repository = new DataRepository<Customer>();
                     //Assert.AreEqual(savedCustomer.CustomerId, 1);
                     break;
-                    return true;
             } //customerRepo.Create(createCustomer);
             return true;
             //attempt to perform most likely CRUD and return value based on success. Don't forget to use exception handling.
