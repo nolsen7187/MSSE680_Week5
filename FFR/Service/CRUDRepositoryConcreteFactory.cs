@@ -7,9 +7,9 @@ using DAL;
 
 namespace Service
 {
-    public class CRUDRepositoryConcreteFactory
+    public abstract class CRUDRepositoryConcreteFactory
     {
-        public DataRepository<T> CRUD<T>() where T : class
+        public static DataRepository<T> CRUD<T>() where T : class
         {
             DataRepository<T> modifiedRepository = Activator.CreateInstance<DataRepository<T>>();
             return modifiedRepository;

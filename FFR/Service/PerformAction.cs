@@ -11,10 +11,10 @@ namespace Service
 {
     public class PerformAction
     {
-        public CRUDRepositoryConcreteFactory cruddy = new CRUDRepositoryConcreteFactory();
+        //public CRUDRepositoryConcreteFactory cruddy = new CRUDRepositoryConcreteFactory();
         public bool Action(Int16 _actionType)
         {
-            var customerRepo = cruddy.CRUD<Customer>();//cruddy.CRUD<Customer>();
+            var customerRepo = CRUDRepositoryConcreteFactory.CRUD<Customer>();//cruddy.CRUD<Customer>();
         customerRepo.Create(InstatiateCallerRequested.customer);
         return true;// = new DataRepository<Customer>();
             /*switch (_actionType)
