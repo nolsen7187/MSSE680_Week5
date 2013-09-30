@@ -2,7 +2,6 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\obj\Debug\Service.csprojR
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\Service.dll.config
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\Service.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\Service.pdb
-C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\EntityFramework.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\FFR.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\FFR.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\Service\bin\Debug\EntityFramework.xml

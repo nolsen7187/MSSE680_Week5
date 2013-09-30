@@ -2,7 +2,6 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\BusinessL
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\BusinessLayer.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\Service.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\FFR.dll
-C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\EntityFramework.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\Service.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\FFR.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week5\FFR\BusinessLayer\bin\Debug\EntityFramework.xml

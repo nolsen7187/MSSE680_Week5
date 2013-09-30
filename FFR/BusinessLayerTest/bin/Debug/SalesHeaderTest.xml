@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This Xml is generated when a new sales order is added on FFR's site-->
+<SalesHeader>
+  <ObjectType>SalesHeader</ObjectType>
+  <ActionType>1</ActionType>
+  <CustomerId>1</CustomerId>
+  <OrderSalesBalance>20.00</OrderSalesBalance>
+  <OrderTaxAmount>5.00</OrderTaxAmount>
+  <OrderTotal>25.00</OrderTotal>
+</SalesHeader>
