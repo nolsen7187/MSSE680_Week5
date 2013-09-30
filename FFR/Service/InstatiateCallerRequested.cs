@@ -15,7 +15,7 @@ namespace Service
         public static SalesHeader salesHeader;
         public static SalesItem salesItem;
         public static Employee employee;
-
+        public static bool custRequested, itemRequested, salesHeaderRequested, salesItemRequested, employeeRequested;
 //        public void InstantiateCallerRequested(string CallerRequested)
         public void InstantiateCallerRequested(XmlWriter localXmlWriter)
         {
@@ -26,34 +26,39 @@ namespace Service
                     && xmlReader.Name == "Customer")
                 {
                     customer = Activator.CreateInstance<Customer>();
-                    //break;
+                    custRequested = true;
+                    break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "Item")
                 {
                     item = Activator.CreateInstance<Item>();
-                    //break;
+                    itemRequested = true;
+                    break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "SalesHeader")
                 {
                     salesHeader = Activator.CreateInstance<SalesHeader>();
-                    //break;
+                    salesHeaderRequested = true;
+                    break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "SalesItem")
                 {
                     salesItem = Activator.CreateInstance<SalesItem>();
-                    //break;
+                    salesItemRequested = true;
+                    break;
                 }
                 if (xmlReader.NodeType == XmlNodeType.Element
                     && xmlReader.Name == "Employee")
                 {
                     employee = Activator.CreateInstance<Employee>();
-                    //break;
+                    employeeRequested = true;
+                    break;
                 }
-
-                //Throw Exception;
+                //throw Exception("No Caller Requested found in XML");
+                
             }
         }
     }
