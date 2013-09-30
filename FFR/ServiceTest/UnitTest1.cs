@@ -12,7 +12,7 @@ using DAL;
 
 namespace ServiceTest
 {
-    /*[TestClass]
+    [TestClass]
     public class UnitTest1
     {
         [TestMethod]
@@ -133,5 +133,5 @@ namespace ServiceTest
         
         }
 
-    }*/
+    }
 }
