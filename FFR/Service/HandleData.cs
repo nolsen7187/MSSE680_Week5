@@ -14,28 +14,18 @@ namespace Service
 {
     public class HandleData
     {
-        //private static string test, passedinstring;
-       // private static Int16 counter;
-        //private static string fieldName;
-        //private static string fieldValue;
-        //private static ArrayList localArrayList;
-        //private static object obj;
         public static Int16 actionType;
-        //XmlElement elementXMl = XmlElement.Load(@
 
-        
-//        public void setdata(ArrayList DataList)
-        public void setdata(XmlWriter localXmlWriter)
+        public void setdata(XmlWriter localXmlWriter, string xmlFileName)
         {
             if (InstatiateCallerRequested.custRequested)
             {
                 foreach (PropertyInfo propertyInfo in typeof(Customer).GetProperties())
                 {
-                    XmlReader xmlReader = XmlReader.Create("Register.xml");
+                    XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
                     while (xmlReader.Read())
                     {
-                        //                if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.Name == "FirstName")
                         if (propertyInfo.Name == xmlReader.Name)
                         {
                             xmlReader.Read();
@@ -87,7 +77,7 @@ namespace Service
             {
                 foreach (PropertyInfo propertyInfo in typeof(Item).GetProperties())
                 {
-                    XmlReader xmlReader = XmlReader.Create("Item.xml");
+                    XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
                     while (xmlReader.Read())
                     {
@@ -128,7 +118,7 @@ namespace Service
             {
                 foreach (PropertyInfo propertyInfo in typeof(SalesHeader).GetProperties())
                 {
-                    XmlReader xmlReader = XmlReader.Create("SalesHeader.xml");
+                    XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
                     while (xmlReader.Read())
                     {
@@ -169,7 +159,7 @@ namespace Service
             {
                 foreach (PropertyInfo propertyInfo in typeof(SalesItem).GetProperties())
                 {
-                    XmlReader xmlReader = XmlReader.Create("SalesItems.xml");
+                    XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
                     while (xmlReader.Read())
                     {
@@ -213,7 +203,7 @@ namespace Service
             {
                 foreach (PropertyInfo propertyInfo in typeof(Employee).GetProperties())
                 {
-                    XmlReader xmlReader = XmlReader.Create("Employee.xml");
+                    XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
                     while (xmlReader.Read())
                     {
@@ -227,6 +217,9 @@ namespace Service
                             {
                                 switch (propertyInfo.Name)
                                 {
+                                    case "EmployeeId":
+                                        InstatiateCallerRequested.employee.EmployeeId = Convert.ToInt16(xmlReader.Value);
+                                        break;
                                     case "EmployeeFirstName":
                                         InstatiateCallerRequested.employee.EmployeeFirstName = xmlReader.Value;
                                         break;

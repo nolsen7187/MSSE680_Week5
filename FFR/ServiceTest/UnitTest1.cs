@@ -12,10 +12,10 @@ using DAL;
 
 namespace ServiceTest
 {
-    [TestClass]
+    /*[TestClass]
     public class UnitTest1
     {
-        /*[TestMethod]
+        [TestMethod]
         public void UseCRUDFactoryandReturnARepositoryandCreateCustomer()
         {
             Int16 actionType = 1;
@@ -51,7 +51,7 @@ namespace ServiceTest
             } //customerRepo.Create(createCustomer);
            // Console.WriteLine("Yeah Buddy");            
         }
-        /*
+        
         
         
         [TestMethod]
@@ -72,13 +72,13 @@ namespace ServiceTest
             createItem.ItemName = "FP Gray Turbo";
             createItem.Price = 1200;
             createItem.ItemCost = 550;
-            createItem.ItemId = 2;
+            //createItem.ItemId = 2;
             var itemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
 
             itemRepo.Create(createItem);
 
             var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
-            Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 2 select d).Single();
+            Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 1 select d).Single();
 
             switch (actionType)
             {
@@ -131,7 +131,7 @@ namespace ServiceTest
                     break;
             }
         
-        }*/
+        }
 
-    }
+    }*/
 }

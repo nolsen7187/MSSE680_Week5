@@ -13,10 +13,10 @@ namespace Service
     public class PerformAction
     {
         private static Int16 actionType;
-        //public CRUDRepositoryConcreteFactory cruddy = new CRUDRepositoryConcreteFactory();
-        public bool Action(XmlWriter localXmlWriter )
+
+        public bool Action(XmlWriter localXmlWriter, string xmlFileName)
         {
-        getActionType(localXmlWriter);
+        getActionType(localXmlWriter, xmlFileName);
 
             if (InstatiateCallerRequested.custRequested)
             {
@@ -24,7 +24,7 @@ namespace Service
                 switch (actionType)
                 {
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.customer);// = new DataRepository<Customer>();
+                        Repo.Create(InstatiateCallerRequested.customer);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.customer);
@@ -42,7 +42,7 @@ namespace Service
                 switch (actionType)
                 {
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.item);// = new DataRepository<Customer>();
+                        Repo.Create(InstatiateCallerRequested.item);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.item);
@@ -60,7 +60,7 @@ namespace Service
                 switch (actionType)
                 {
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.salesHeader);// = new DataRepository<Customer>();
+                        Repo.Create(InstatiateCallerRequested.salesHeader);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.salesHeader);
@@ -78,7 +78,7 @@ namespace Service
                 switch (actionType)
                 {
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.salesItem);// = new DataRepository<Customer>();
+                        Repo.Create(InstatiateCallerRequested.salesItem);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.salesItem);
@@ -96,7 +96,7 @@ namespace Service
                 switch (actionType)
                 {
                     case 1://Create
-                        Repo.Create(InstatiateCallerRequested.employee);// = new DataRepository<Customer>();
+                        Repo.Create(InstatiateCallerRequested.employee);
                         break;
                     case 2://Update
                         Repo.Update(InstatiateCallerRequested.employee);
@@ -108,12 +108,12 @@ namespace Service
                         break;
                 }
             }
-            return;
+            return false; ;
         }
-        public static void getActionType(XmlWriter localXmlWriter)
+        public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
         {
 
-        XmlReader xmlReader = XmlReader.Create("Register.xml");
+            XmlReader xmlReader = XmlReader.Create(xmlFileName);
 
             while (xmlReader.Read())
             {

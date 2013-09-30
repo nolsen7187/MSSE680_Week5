@@ -21,7 +21,6 @@ namespace FFR_Test
             FFREntities ffrDb = new FFREntities();
 
             Customer customer = new Customer();
-            customer.CustomerId = 1;
             customer.FirstName = "Nick";
             customer.LastName = "Olsen";
             customer.City = "Parker";
@@ -37,7 +36,7 @@ namespace FFR_Test
 
             SalesHeader salesHeader = new SalesHeader();
 
-            salesHeader.CustomerId = customer.CustomerId;
+            //salesHeader.CustomerId = 1;
             salesHeader.SalesStatus = "Open";
             salesHeader.OrderSalesBalance = 50;
             salesHeader.OrderTaxAmount = 5;
@@ -51,17 +50,16 @@ namespace FFR_Test
         {
             FFREntities ffrDb = new FFREntities();
 
-            Customer savedCustomer = (from d in ffrDb.Customers where d.CustomerId == 1 select d).Single();
+            Customer savedCustomer = (from d in ffrDb.Customers where d.CustomerId == 2 select d).Single();
 
-            Assert.AreEqual(savedCustomer.CustomerId, 1);
+            Assert.AreEqual(savedCustomer.CustomerId, 2);
         }
-        [TestMethod]
+/*        [TestMethod]
         public void DeleteSalesHeader()
         {
             FFREntities ffrDb = new FFREntities();
 
             SalesHeader salesHeader = new SalesHeader();
-            salesHeader.SalesId = 1;
             salesHeader.SalesStatus = "Delete";
             salesHeader.OrderSalesBalance = 50;
             salesHeader.OrderTaxAmount = 5;
@@ -70,7 +68,7 @@ namespace FFR_Test
             ffrDb.SalesHeaders.Add(salesHeader);
             ffrDb.SaveChanges();
 
-            SalesHeader deleteSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesId == 1 select d).Single();
+            SalesHeader deleteSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesId == 2 select d).Single();
             ffrDb.SalesHeaders.Remove(deleteSalesHeader);
             ffrDb.SaveChanges();
         }
@@ -80,7 +78,6 @@ namespace FFR_Test
             FFREntities ffrDb = new FFREntities();
 
             SalesHeader salesHeader = new SalesHeader();
-            salesHeader.SalesId = 2;
             salesHeader.CustomerId = 1;
             salesHeader.SalesStatus = "Update";
             salesHeader.OrderSalesBalance = 50;
@@ -90,7 +87,7 @@ namespace FFR_Test
             ffrDb.SalesHeaders.Add(salesHeader);
             ffrDb.SaveChanges();
 
-            SalesHeader updateSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesId == 2 select d).Single();
+            SalesHeader updateSalesHeader = (from d in ffrDb.SalesHeaders where d.SalesId == 3 select d).Single();
             updateSalesHeader.SalesStatus = "Record has been updated!";
             ffrDb.SaveChanges();
         }
@@ -100,7 +97,6 @@ namespace FFR_Test
             var customerRepo = new DataRepository<Customer>();
 
             Customer createCustomer = new Customer();
-            createCustomer.CustomerId = 1;
             createCustomer.FirstName = "Jackie";
             createCustomer.LastName = "Olsen";
             createCustomer.Address = "11320 Lovage Way";

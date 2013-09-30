@@ -17,21 +17,22 @@ namespace BusinessLayer
         //private string CallerRequested;
         //private ArrayList DataList;
         private XmlWriter localXmlWriter;
+        private string localxmlFileName;
 
         //public Facade(string CallerRequested, ArrayList DataList)
-        public Facade(XmlWriter xmlWriter)
+        public Facade(XmlWriter xmlWriter, string xmlFileName)
         {
             //this.CallerRequested = CallerRequested;
             //this.DataList = DataList;
             this.localXmlWriter = xmlWriter;
-            
+            this.localxmlFileName = xmlFileName;
         }
 
         public void RegisterCustomer()
         {
-            instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter);
-            handleData.setdata(localXmlWriter);
-            performAction.Action(localXmlWriter);
+            instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter, localxmlFileName);
+            handleData.setdata(localXmlWriter, localxmlFileName);
+            performAction.Action(localXmlWriter, localxmlFileName);
         }
     }
 }

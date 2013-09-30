@@ -16,10 +16,10 @@ namespace Service
         public static SalesItem salesItem;
         public static Employee employee;
         public static bool custRequested, itemRequested, salesHeaderRequested, salesItemRequested, employeeRequested;
-//        public void InstantiateCallerRequested(string CallerRequested)
-        public void InstantiateCallerRequested(XmlWriter localXmlWriter)
+
+        public void InstantiateCallerRequested(XmlWriter localXmlWriter, string xmlFileName)
         {
-            XmlReader xmlReader = XmlReader.Create("Register.xml");
+            XmlReader xmlReader = XmlReader.Create(xmlFileName);
             while (xmlReader.Read())
             {
                 if (xmlReader.NodeType == XmlNodeType.Element
