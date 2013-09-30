@@ -71,6 +71,7 @@ namespace Service
                             }
                         }
                     }
+                    xmlReader.Close();
                 }
             }
             else if (InstatiateCallerRequested.itemRequested)
@@ -112,6 +113,7 @@ namespace Service
                             }
                         }
                     }
+                    xmlReader.Close();
                 }
             }
             else if (InstatiateCallerRequested.salesHeaderRequested)
@@ -122,7 +124,6 @@ namespace Service
 
                     while (xmlReader.Read())
                     {
-                        //                if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.Name == "FirstName")
                         if (propertyInfo.Name == xmlReader.Name)
                         {
                             xmlReader.Read();
@@ -147,12 +148,13 @@ namespace Service
                                     case "SalesStatus":
                                         InstatiateCallerRequested.salesHeader.SalesStatus = xmlReader.Value;
                                         break;
-                                     default:
+                                    default:
                                         break;
                                 }
                             }
                         }
                     }
+                    xmlReader.Close();
                 }
             }
             else if (InstatiateCallerRequested.salesItemRequested)
@@ -163,7 +165,6 @@ namespace Service
 
                     while (xmlReader.Read())
                     {
-                        //                if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.Name == "FirstName")
                         if (propertyInfo.Name == xmlReader.Name)
                         {
                             xmlReader.Read();
@@ -197,6 +198,7 @@ namespace Service
                             }
                         }
                     }
+                    xmlReader.Close();
                 }
             }
             else if (InstatiateCallerRequested.employeeRequested)
@@ -238,6 +240,7 @@ namespace Service
                             }
                         }
                     }
+                    xmlReader.Close();
                 }
             }
         }

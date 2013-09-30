@@ -17,7 +17,7 @@ namespace BusinessLayer
         //private string CallerRequested;
         //private ArrayList DataList;
         private XmlWriter localXmlWriter;
-        private string localxmlFileName;
+        private string localxmlFileName = "";
 
         //public Facade(string CallerRequested, ArrayList DataList)
         public Facade(XmlWriter xmlWriter, string xmlFileName)
@@ -33,6 +33,10 @@ namespace BusinessLayer
             instatiateCallerRequested.InstantiateCallerRequested(localXmlWriter, localxmlFileName);
             handleData.setdata(localXmlWriter, localxmlFileName);
             performAction.Action(localXmlWriter, localxmlFileName);
+
+            this.localXmlWriter.Dispose();
+            this.localxmlFileName = "";
+                
         }
     }
 }

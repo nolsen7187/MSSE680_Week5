@@ -10,10 +10,10 @@
         <AssociationConnector Association="FFRModel.FK_SalesHeader_Customer" ManuallyRouted="false" />
         <EntityTypeShape EntityType="FFRModel.Employee" Width="1.5" PointX="8.2684146819023479" PointY="23.54244210922273" />
         <EntityTypeShape EntityType="FFRModel.Item" Width="1.5" PointX="6.6104171977426933" PointY="2.3455028991892481" />
-        <EntityTypeShape EntityType="FFRModel.SalesItem" Width="1.5" PointX="6.5342639752357563" PointY="11.746133034930626" />
+        <EntityTypeShape EntityType="FFRModel.SalesItem" Width="1.5" PointX="2.0930529153407798" PointY="7.0210509034903028" />
         <AssociationConnector Association="FFRModel.FK_SalesItems_Items" />
         <AssociationConnector Association="FFRModel.FK_SalesItems_SalesHeaders" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

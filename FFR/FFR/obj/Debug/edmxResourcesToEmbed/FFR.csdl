@@ -46,7 +46,7 @@
     <Property Name="OrderTotal" Type="Decimal" Precision="10" Scale="0" />
     <Property Name="SalesStatus" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Customer" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="SalesHeader" ToRole="Customer" />
-    <NavigationProperty Name="SalesItem" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesHeader" ToRole="SalesItem" />
+    <NavigationProperty Name="SalesItems" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesHeader" ToRole="SalesItem" />
   </EntityType>
   <Association Name="FK_SalesHeader_Customer">
     <End Role="Customer" Type="FFRModel.Customer" Multiplicity="0..1" />
@@ -83,8 +83,9 @@
   </EntityType>
   <EntityType Name="SalesItem">
     <Key>
-      <PropertyRef Name="SalesId" />
+      <PropertyRef Name="SalesItemTransId" />
     </Key>
+    <Property Type="Int32" Name="SalesItemTransId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="SalesId" Nullable="false" />
     <Property Type="Int32" Name="ItemId" Nullable="false" />
     <Property Type="Int32" Name="Qty" />
@@ -108,7 +109,7 @@
   </Association>
   <Association Name="FK_SalesItems_SalesHeaders">
     <End Type="FFRModel.SalesHeader" Role="SalesHeader" Multiplicity="1" />
-    <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="0..1" />
+    <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SalesHeader">
         <PropertyRef Name="SalesId" />

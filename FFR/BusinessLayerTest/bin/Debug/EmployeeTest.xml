@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This Xml is generated when a new Employee registers on FFR's site-->
+<Employee>
+  <ObjectType>Employee</ObjectType>
+  <ActionType>1</ActionType>
+  <EmployeeFirstName>BusinessNick</EmployeeFirstName>
+  <EmployeeLastName>Olsen</EmployeeLastName>
+  <EmployeePhone>3037181335</EmployeePhone>
+  <Employeetype>Jedi</Employeetype>
+</Employee>

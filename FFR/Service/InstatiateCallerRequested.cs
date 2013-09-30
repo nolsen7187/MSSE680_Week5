@@ -15,7 +15,7 @@ namespace Service
         public static SalesHeader salesHeader;
         public static SalesItem salesItem;
         public static Employee employee;
-        public static bool custRequested, itemRequested, salesHeaderRequested, salesItemRequested, employeeRequested;
+        public static bool custRequested = false, itemRequested, salesHeaderRequested, salesItemRequested, employeeRequested;
 
         public void InstantiateCallerRequested(XmlWriter localXmlWriter, string xmlFileName)
         {
@@ -58,8 +58,9 @@ namespace Service
                     break;
                 }
                 //throw Exception("No Caller Requested found in XML");
-                
+
             }
+            xmlReader.Close();
         }
     }
 }

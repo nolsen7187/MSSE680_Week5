@@ -52,14 +52,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SalesItems">
-      <EntityTypeMapping TypeName="IsTypeOf(FFRModel.SalesItem)">
+      <EntityTypeMapping TypeName="FFRModel.SalesItem">
         <MappingFragment StoreEntitySet="SalesItems">
-          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
-          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-          <ScalarProperty Name="Qty" ColumnName="Qty" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="LineAmount" ColumnName="LineAmount" />
           <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="LineAmount" ColumnName="LineAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+          <ScalarProperty Name="SalesItemTransId" ColumnName="SalesItemTransId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

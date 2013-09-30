@@ -14,6 +14,7 @@ namespace DAL
     
     public partial class SalesItem
     {
+        public int SalesItemTransId { get; set; }
         public int SalesId { get; set; }
         public int ItemId { get; set; }
         public Nullable<int> Qty { get; set; }

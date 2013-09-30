@@ -67,9 +67,10 @@
   </EntityType>
   <EntityType Name="SalesItems">
     <Key>
-      <PropertyRef Name="SalesId" />
+      <PropertyRef Name="SalesItemTransId" />
     </Key>
-    <Property Name="SalesId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesItemTransId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalesId" Type="int" Nullable="false" />
     <Property Name="ItemId" Type="int" Nullable="false" />
     <Property Name="Qty" Type="int" />
     <Property Name="Price" Type="decimal" Precision="19" Scale="4" />
@@ -102,7 +103,7 @@
   </Association>
   <Association Name="FK_SalesItems_SalesHeaders">
     <End Role="SalesHeaders" Type="FFRModel.Store.SalesHeaders" Multiplicity="1" />
-    <End Role="SalesItems" Type="FFRModel.Store.SalesItems" Multiplicity="0..1" />
+    <End Role="SalesItems" Type="FFRModel.Store.SalesItems" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SalesHeaders">
         <PropertyRef Name="SalesId" />

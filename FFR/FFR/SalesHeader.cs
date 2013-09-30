@@ -14,6 +14,11 @@ namespace DAL
     
     public partial class SalesHeader
     {
+        public SalesHeader()
+        {
+            this.SalesItems = new HashSet<SalesItem>();
+        }
+    
         public int SalesId { get; set; }
         public Nullable<int> CustomerId { get; set; }
         public Nullable<decimal> OrderSalesBalance { get; set; }
@@ -22,6 +27,6 @@ namespace DAL
         public string SalesStatus { get; set; }
     
         public virtual Customer Customer { get; set; }
-        public virtual SalesItem SalesItem { get; set; }
+        public virtual ICollection<SalesItem> SalesItems { get; set; }
     }
 }

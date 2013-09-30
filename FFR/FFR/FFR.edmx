@@ -72,9 +72,10 @@
         </EntityType>
         <EntityType Name="SalesItems">
           <Key>
-            <PropertyRef Name="SalesId" />
+            <PropertyRef Name="SalesItemTransId" />
           </Key>
-          <Property Name="SalesId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesItemTransId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SalesId" Type="int" Nullable="false" />
           <Property Name="ItemId" Type="int" Nullable="false" />
           <Property Name="Qty" Type="int" />
           <Property Name="Price" Type="decimal" Precision="19" Scale="4" />
@@ -107,7 +108,7 @@
         </Association>
         <Association Name="FK_SalesItems_SalesHeaders">
           <End Role="SalesHeaders" Type="FFRModel.Store.SalesHeaders" Multiplicity="1" />
-          <End Role="SalesItems" Type="FFRModel.Store.SalesItems" Multiplicity="0..1" />
+          <End Role="SalesItems" Type="FFRModel.Store.SalesItems" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SalesHeaders">
               <PropertyRef Name="SalesId" />
@@ -139,7 +140,7 @@
             <End Role="SalesHeader" EntitySet="SalesHeaders" />
             <End Role="SalesItem" EntitySet="SalesItems" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -167,7 +168,7 @@
           <Property Name="OrderTotal" Type="Decimal" Precision="10" Scale="0" />
           <Property Name="SalesStatus" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Customer" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="SalesHeader" ToRole="Customer" />
-          <NavigationProperty Name="SalesItem" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesHeader" ToRole="SalesItem" />
+          <NavigationProperty Name="SalesItems" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesHeader" ToRole="SalesItem" />
         </EntityType>
         <Association Name="FK_SalesHeader_Customer">
           <End Role="Customer" Type="FFRModel.Customer" Multiplicity="0..1" />
@@ -204,8 +205,9 @@
         </EntityType>
         <EntityType Name="SalesItem">
           <Key>
-            <PropertyRef Name="SalesId" />
+            <PropertyRef Name="SalesItemTransId" />
           </Key>
+          <Property Type="Int32" Name="SalesItemTransId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Int32" Name="SalesId" Nullable="false" />
           <Property Type="Int32" Name="ItemId" Nullable="false" />
           <Property Type="Int32" Name="Qty" />
@@ -229,7 +231,7 @@
         </Association>
         <Association Name="FK_SalesItems_SalesHeaders">
           <End Type="FFRModel.SalesHeader" Role="SalesHeader" Multiplicity="1" />
-          <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="0..1" />
+          <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SalesHeader">
               <PropertyRef Name="SalesId" />
@@ -239,7 +241,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -295,18 +297,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SalesItems">
-      <EntityTypeMapping TypeName="IsTypeOf(FFRModel.SalesItem)">
-        <MappingFragment StoreEntitySet="SalesItems">
-          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
-          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
-          <ScalarProperty Name="Qty" ColumnName="Qty" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="LineAmount" ColumnName="LineAmount" />
-          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+          <EntitySetMapping Name="SalesItems">
+            <EntityTypeMapping TypeName="FFRModel.SalesItem">
+              <MappingFragment StoreEntitySet="SalesItems">
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="LineAmount" ColumnName="LineAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+                <ScalarProperty Name="SalesItemTransId" ColumnName="SalesItemTransId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

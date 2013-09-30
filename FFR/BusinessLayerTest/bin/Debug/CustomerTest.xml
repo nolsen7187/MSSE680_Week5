@@ -3,7 +3,7 @@
 <Customer>
   <ObjectType>Customer</ObjectType>
   <ActionType>1</ActionType>
-  <FirstName>BusinessNick</FirstName>
+  <FirstName>Business Nick</FirstName>
   <LastName>Olsen</LastName>
   <City>Parker</City>
   <State>CO</State>

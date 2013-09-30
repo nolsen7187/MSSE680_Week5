@@ -97,7 +97,8 @@ GO
 
 -- Creating table 'SalesItems'
 CREATE TABLE [dbo].[SalesItems] (
-    [SalesId] int IDENTITY(1,1) NOT NULL,
+    [SalesItemTransId] int IDENTITY(1,1) NOT NULL,
+    [SalesId] int  NOT NULL,
     [ItemId] int  NOT NULL,
     [Qty] int  NULL,
     [Price] decimal(19,4)  NULL,
@@ -137,7 +138,7 @@ GO
 -- Creating primary key on [SalesId] in table 'SalesItems'
 ALTER TABLE [dbo].[SalesItems]
 ADD CONSTRAINT [PK_SalesItems]
-    PRIMARY KEY CLUSTERED ([SalesId] ASC);
+    PRIMARY KEY CLUSTERED ([SalesItemTransId] ASC);
 GO
 
 -- --------------------------------------------------
